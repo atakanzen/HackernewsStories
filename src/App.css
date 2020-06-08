@@ -4,7 +4,7 @@
 }
 
 .App-header {
-  background-color: #00758f;
+  background-color: #ff6565;
   min-height: 5vh;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
 }
 
 .App-footer {
-  background-color: #00758f;
+  background-color: #ff6565;
   min-height: 1vh;
   display: flex;
   flex-direction: column;
@@ -25,23 +25,19 @@
   color: white;
 }
 
-.App-link {
-  color: #00efff;
-}
-
 .card {
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
-  box-sizing: border-box;
-  border-radius: 25px;
   width: 650px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(45deg, rgba(37,101,191,1) 11%, rgba(0,209,255,1) 51%, rgba(0,106,255,1) 91%); 
-  color: white;
+  background: #ffffff; 
+  color: black;
 }
 
 .card:hover {
