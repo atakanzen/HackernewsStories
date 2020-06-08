@@ -8,12 +8,19 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 
-const myStyles = makeStyles({
+const myStyles = makeStyles((theme) => ({
   table: {
-    minWidth: 650,
-  },
-});
+    [theme.breakpoints.down("md")]: {
+      minWidth: 350
+    },
+    [theme.breakpoints.up(768)]: {
+      minWidth: 768
+    }
+  }
+}));
 
 const App = () =>  {
   // state = {
@@ -59,11 +66,14 @@ const App = () =>  {
            { 
 
             // Showing data with tables using material-ui
-        <TableContainer component={Paper}>
+            <Grid container={true} >
+              <TableContainer component={Paper}>
           <Table className={classes.table} aria-label="Best Stories">
             <TableHead>
               <TableRow>
+                {/* <Hidden only={['md','sm','xs']}> */}
                 <TableCell>Rank</TableCell>
+                {/* </Hidden> */}
                 <TableCell>Title</TableCell>
                 <TableCell>Score</TableCell>
                 <TableCell>URL</TableCell>
@@ -72,7 +82,9 @@ const App = () =>  {
             <TableBody>
               {topNews.map((news, idx) => (
                 <TableRow key={news._id}>
+                  {/* <Hidden only={['xs','sm','md']}> */}
                   <TableCell >{idx + 1}</TableCell>
+                  {/* </Hidden> */}
                   <TableCell component="th" scope="row">
                     {news.title}
                   </TableCell>
@@ -83,6 +95,8 @@ const App = () =>  {
             </TableBody>
           </Table>
         </TableContainer>
+
+            </Grid>
       }
       </div>
     );
