@@ -23,7 +23,7 @@ const App = () =>  {
 
   const [topNews, setTopNews] = useState([]);
    useEffect(() => {
-    fetch('http://hackernews.gokhanarkan.com/api/top')
+    fetch('http://ec2-3-9-170-42.eu-west-2.compute.amazonaws.com/api/top')
     .then(data => data.json())
     .then(news => {
       setTopNews(news);
@@ -84,9 +84,6 @@ const App = () =>  {
           </Table>
         </TableContainer>
       }
-          <div className="App-footer">  
-          <p>Created by Atakan Zengin with React</p>
-          </div>
       </div>
     );
   
