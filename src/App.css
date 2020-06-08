@@ -4,8 +4,8 @@
 }
 
 .App-header {
-  background-color: #ff6565;
-  min-height: 5vh;
+  background-color: #00d8ff;
+  height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,7 +15,7 @@
 }
 
 .App-footer {
-  background-color: #ff6565;
+  background-color: #00d8ff;
   min-height: 1vh;
   display: flex;
   flex-direction: column;
@@ -23,9 +23,16 @@
   justify-content: center;
   font-size: calc(2px + 2vmin);
   color: white;
+  margin-bottom: 0px;
 }
 
-.card {
+.MuiTableCell-head {
+  font-weight: bolder !important; 
+}
+
+/* Commented out cards since I'm using tables. */
+
+/* .card {
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: auto;
@@ -50,4 +57,4 @@
     width: 300px;
     font-size: smaller;
   }
-}
+} */
