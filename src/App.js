@@ -30,7 +30,7 @@ const App = () =>  {
 
   const [topNews, setTopNews] = useState([]);
    useEffect(() => {
-    fetch('https://hackernews.gokhanarkan.com/')
+    fetch('https://hackernews.gokhanarkan.com/api/top')
     .then(data => data.json())
     .then(news => {
       setTopNews(news);
