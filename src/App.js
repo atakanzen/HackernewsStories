@@ -30,7 +30,7 @@ const App = () =>  {
 
   const [topNews, setTopNews] = useState([]);
    useEffect(() => {
-    fetch('http://ec2-3-9-170-42.eu-west-2.compute.amazonaws.com/api/top')
+    fetch('https://hackernews.gokhanarkan.com/')
     .then(data => data.json())
     .then(news => {
       setTopNews(news);
