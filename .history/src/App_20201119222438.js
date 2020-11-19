@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -9,6 +9,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 
 const myStyles = makeStyles((theme) => ({
   table: {
@@ -85,7 +86,7 @@ const App = () =>  {
                   <TableCell >{idx + 1}</TableCell>
                   {/* </Hidden> */}
                   <TableCell component="th" scope="row">
-                    <span id="title">{news.title}</span> 
+                    {news.title}
                   </TableCell>
                   <TableCell>{news.score}</TableCell>
                   <TableCell><a rel="noopener noreferrer" target="_blank" href={news.url}>Read More</a></TableCell>

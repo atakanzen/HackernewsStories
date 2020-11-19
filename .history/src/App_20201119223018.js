@@ -85,7 +85,7 @@ const App = () =>  {
                   <TableCell >{idx + 1}</TableCell>
                   {/* </Hidden> */}
                   <TableCell component="th" scope="row">
-                    <span id="title">{news.title}</span> 
+                    <span style="font-weight: bolder">{news.title}</span> 
                   </TableCell>
                   <TableCell>{news.score}</TableCell>
                   <TableCell><a rel="noopener noreferrer" target="_blank" href={news.url}>Read More</a></TableCell>
